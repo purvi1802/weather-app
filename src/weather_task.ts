@@ -17,15 +17,14 @@ app.get('/getWeather', async (req: Request, res: Response) => {
 
   try {
     // Fetch coordinates using OpenStreetMap API
-    console.log('here 1')
+
+
     const open_Street_Map_Response = await axios.get(open_Street_Map_Url, {
       params: {
         q: city_name,
         format: 'json',
       },
     });
-
-    console.log('here 2')
     console.log(open_Street_Map_Response.data)
 
     // Check if the OpenStreetMap API returned valid data
